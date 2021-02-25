@@ -1,0 +1,27 @@
+G;Gimnasio de Isla Azafran;35;3
+L; Sabrina
+P;Kadabra;110;40;35
+P;Mr. Mime;95;50;70
+P;Venomoth;90;65;60
+P;Alakazam;120;50;45
+E;Exorcista
+P;Haunter;105;60;55
+E;Exorcista
+P;Gastly;85;40;35
+P;Haunter;100;55;50
+E;Medium
+P;Mr. Mime;95;50;70
+P;Kadabra;110;40;35
+E;Exorcista
+P;Gastly;80;35;30
+P;Gastly;80;35;30
+P;Haunter;95;50;45
+E;Medium
+P;Slowpoke;20;70;70
+P;Slowpoke;20;70;70
+P;Slowbro;30;75;110
+E;Medium
+P;Kadabra;105;35;30
+P;Slowpoke;15;65;65
+P;Mr. Mime;90;45;65
+P;Kadabra;105;35;30

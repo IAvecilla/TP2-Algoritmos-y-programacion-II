@@ -1,0 +1,26 @@
+G;Gimnasio de Ciudad Fucsia;25;4
+L;Koga
+P;Koffing;35;65;95
+P;Muk;50;105;75
+P;Koffing;35;65;95
+P;Weezing;60;90;120
+E;Malabarista
+P;Hypno;72;78;75
+E;Domador
+P;Sandslash;70;105;115
+P;Arbok;85;100;74
+E;Malabarista
+P;Drowzee;47;53;48
+P;Hypno;67;73;70
+E;Malabarista
+P;Drowzee;47;53;48
+P;Kadabra;110;38;35
+E;Domador
+P;Arbok;80;95;69
+P;Sandslash;65;100;110
+P;Arbok;80;95;69
+E;Malabarista
+P;Drowzee;42;48;45
+P;Drowzee;42;48;45
+P;Kadabra;105;35;30
+P;Drowzee;42;48;45

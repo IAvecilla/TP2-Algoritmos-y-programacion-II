@@ -1,0 +1,29 @@
+G;Gimnasio de Isla Canela;30;1
+L; Blaine
+P;Growlithe;80;90;65
+P;Ponyta;95;90;60
+P;Rapidash;105;100;70
+P;Arcanine;95;110;80
+E;Supernecio
+P;Growlithe;75;85;60
+P;Vulpix;85;61;60
+E;Ladron
+P;Vulpix;80;56;55
+P;Growlithe;70;80;55
+E;Supernecio
+P;Rapidash;105;100;70
+E;Ladron
+P;Ponyta;95;90;60
+E;Supernecio
+P;Vulpix;75;51;50
+P;Vulpix;75;51;50
+P;Ninetales;105;81;80
+E;Supernecio
+P;Ponyta;90;85;55
+P;Charmander;65;52;43
+P;Vulpix;70;46;45
+P;Growlithe;65;75;50
+E;Ladron
+P;Growlithe;60;70;45
+P;Vulpix;65;41;40
+P;Ninetales;100;76;75

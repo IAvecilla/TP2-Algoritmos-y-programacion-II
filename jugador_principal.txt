@@ -1,0 +1,12 @@
+E;Ash
+P;Pikachu;90;55;40
+P;Butterfree;70;45;50
+P;Pidgeotto;71;60;55
+P;Bulbasaur;45;49;49
+P;Charmander;65;52;43
+P;Squirtle;43;48;65
+P;Krabby;50;105;90
+P;Raticate;97;81;60
+P;Haunter;95;50;45
+P;Primeape;95;105;60
+P;Muk;50;105;75

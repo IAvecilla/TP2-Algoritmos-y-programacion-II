@@ -1,0 +1,25 @@
+G;Gimnasio de Ciudad Azulona;20;2
+L;Erika
+P;Victreebel;70;105;65
+P;Tangela;60;55;115
+P;Vileplume;50;80;85
+E;Entrenadora
+P;Exeggcute;40;40;80
+E;Entrenadora
+P;Oddish;35;55;60
+P;Gloom;45;70;75
+E;Entrenadora
+P;Bellsprout;50;85;45
+P;Bellsprout;50;85;45
+E;Entrenadora
+P;Bulbasaur;45;49;49
+P;Ivysaur;65;67;68
+E;Entrenadora
+P;Bellsprout;45;80;40
+P;Oddish;30;50;55
+P;Weepinbell;60;95;55
+P;Gloom;40;65;70
+P;Ivysaur;60;62;63
+E;Entrenadora
+P;Bellsprout;40;75;35
+P;Weepinbell;55;90;50

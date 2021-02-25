@@ -1,0 +1,175 @@
+G;Gimnasio de Ciudad Carmin;15;2
+L;Lt. Surge
+P;Voltorb;105;35;55
+P;Pikachu;100;65;50
+P;Raichu;110;90;55
+E;Caballero
+P;Pikachu;95;60;45
+E;Mecanico
+P;Voltorb;100;30;50
+P;Magnemite;45;35;70
+E;Marinero 
+P;Pikachu;90;55;40
+P;Pikachu;90;55;40
+G;Gimnasio de Isla Canela;30;1
+L; Blaine
+P;Growlithe;80;90;65
+P;Ponyta;95;90;60
+P;Rapidash;105;100;70
+P;Arcanine;95;110;80
+E;Supernecio
+P;Growlithe;75;85;60
+P;Vulpix;85;61;60
+E;Ladron
+P;Vulpix;80;56;55
+P;Growlithe;70;80;55
+E;Supernecio
+P;Rapidash;105;100;70
+E;Ladron
+P;Ponyta;95;90;60
+E;Supernecio
+P;Vulpix;75;51;50
+P;Vulpix;75;51;50
+P;Ninetales;105;81;80
+E;Supernecio
+P;Ponyta;90;85;55
+P;Charmander;65;52;43
+P;Vulpix;70;46;45
+P;Growlithe;65;75;50
+E;Ladron
+P;Growlithe;60;70;45
+P;Vulpix;65;41;40
+P;Ninetales;100;76;75
+G;Gimnasio de Ciudad Azulona;20;2
+L;Erika
+P;Victreebel;70;105;65
+P;Tangela;60;55;115
+P;Vileplume;50;80;85
+E;Entrenadora
+P;Exeggcute;40;40;80
+E;Entrenadora
+P;Oddish;35;55;60
+P;Gloom;45;70;75
+E;Entrenadora
+P;Bellsprout;50;85;45
+P;Bellsprout;50;85;45
+E;Entrenadora
+P;Bulbasaur;45;49;49
+P;Ivysaur;65;67;68
+E;Entrenadora
+P;Bellsprout;45;80;40
+P;Oddish;30;50;55
+P;Weepinbell;60;95;55
+P;Gloom;40;65;70
+P;Ivysaur;60;62;63
+E;Entrenadora
+P;Bellsprout;40;75;35
+P;Weepinbell;55;90;50
+G;Gimnasio de Ciudad Plateada;5;5
+L;Brock
+P;Geodude;20;80;100
+P;Onix;70;45;160
+E;Campista
+P;Geodude;20;80;100
+P;Sandshrew;40;75;85
+G;Gimnasio de Ciudad Verde;40;3
+L; Giovanni
+P;Rhyhorn;35;95;105
+P;Dugtrio;120;100;50
+P;Nidoqueen;81;97;92
+P;Nidoking;90;107;82
+P;Rhydon;40;130;120
+E;Karateka
+P;Machoke;55;110;80
+E;Domador
+P;Rhyhorn;30;90;100
+E;Karateka
+P;Machop;40;85;55
+P;Machoke;50;105;75
+E;Domador
+P;Arbok;80;95;69
+P;Tauros;110;100;95
+E;Karateka
+P;Machoke;45;100;70
+P;Machop;35;80;50
+P;Machoke;45;100;70
+E;Entrenador
+P;Marowak;50;85;115
+P;Marowak;50;85;115
+P;Rhyhorn;30;90;100
+P;Nidorina;56;62;67
+P;Nidoqueen;76;92;87
+E;Entrenador
+P;Sandslash;70;105;115
+P;Graveler;35;95;115
+P;Onix;70;45;160
+P;Graveler;35;95;115
+P;Marowak;45;80;110
+E;Entrenador
+P;Sandslash;65;100;110
+P;Sandslash;65;100;110
+P;Rhyhorn;25;85;95
+P;Nidorino;56;62;57
+P;Nidoking;85;102;77
+G;Gimnasio de Ciudad Fucsia;25;4
+L;Koga
+P;Koffing;35;65;95
+P;Muk;50;105;75
+P;Koffing;35;65;95
+P;Weezing;60;90;120
+E;Malabarista
+P;Hypno;72;78;75
+E;Domador
+P;Sandslash;70;105;115
+P;Arbok;85;100;74
+E;Malabarista
+P;Drowzee;47;53;48
+P;Hypno;67;73;70
+E;Malabarista
+P;Drowzee;47;53;48
+P;Kadabra;110;38;35
+E;Domador
+P;Arbok;80;95;69
+P;Sandslash;65;100;110
+P;Arbok;80;95;69
+E;Malabarista
+P;Drowzee;42;48;45
+P;Drowzee;42;48;45
+P;Kadabra;105;35;30
+P;Drowzee;42;48;45
+G;Gimnasio de Ciudad Celeste;10;3
+L;Misty
+P;Staryu;85;45;55
+P;Starmie;115;75;85
+E;Dominguera Diana
+P;Goldeen;63;67;60
+E;Nadador Luis
+P;Horsea;60;40;70
+P;Shellder;40;65;100
+G;Gimnasio de Isla Azafran;35;3
+L; Sabrina
+P;Kadabra;110;40;35
+P;Mr. Mime;95;50;70
+P;Venomoth;90;65;60
+P;Alakazam;120;50;45
+E;Exorcista
+P;Haunter;105;60;55
+E;Exorcista
+P;Gastly;85;40;35
+P;Haunter;100;55;50
+E;Medium
+P;Mr. Mime;95;50;70
+P;Kadabra;110;40;35
+E;Exorcista
+P;Gastly;80;35;30
+P;Gastly;80;35;30
+P;Haunter;95;50;45
+E;Medium
+P;Slowpoke;20;70;70
+P;Slowpoke;20;70;70
+P;Slowbro;30;75;110
+E;Medium
+P;Kadabra;105;35;30
+P;Slowpoke;15;65;65
+P;Mr. Mime;90;45;65
+P;Kadabra;105;35;30
