@@ -1,5 +1,6 @@
 #include "pokemon.h"
 
+
 void destruir_pokemon (pokemon_t* pokemon) {
     free(pokemon);
 }

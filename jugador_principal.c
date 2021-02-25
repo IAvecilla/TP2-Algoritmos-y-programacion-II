@@ -1,6 +1,7 @@
 #include "jugador_principal.h"
 #include "interfaz.h"
 
+
 void destructor_personaje (void* personaje) {
     while (!lista_vacia(((personaje_t*)personaje)->lista_pokemones_obtenidos)) {
         pokemon_t* pokemon = lista_elemento_en_posicion(((personaje_t*)personaje)->lista_pokemones_obtenidos, 0);

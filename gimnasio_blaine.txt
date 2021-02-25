@@ -1,4 +1,4 @@
-G;Gimnasio de Isla Canela;30;1
+G;Gimnasio de Isla Canela;301
 L; Blaine
 P;Growlithe;80;90;65
 P;Ponyta;95;90;60
