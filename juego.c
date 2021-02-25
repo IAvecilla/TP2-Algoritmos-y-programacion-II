@@ -126,10 +126,9 @@ int iniciar_batalla (entrenador_t* enemigo, personaje_t* jugador, int (*funcion_
     limpiar_consola();
     
     //Se guarda el mensaje con el nombre del pokemon ganador y el pokemon en cuestion
-    char mensaje_ganador[100];
-    pokemon_t* pokemon_ganador;
-
-    char input;
+    char mensaje_ganador[100] = "";
+    pokemon_t* pokemon_ganador = NULL;
+    char input = ESPERANDO_INPUT;
 
     pokemon_t* pokemon_personaje = lista_elemento_en_posicion(jugador->lista_pokemones_obtenidos, (size_t)indice_pokemon_personaje);
     pokemon_t* pokemon_enemigo = lista_elemento_en_posicion(enemigo->lista_pokemones, (size_t)indice_pokemon_enemigo);
@@ -320,7 +319,6 @@ gimnasio_t* pasar_a_siguiente_gimnasio (gimnasio_t* gimnasio_actual, heap_t* hea
     return proximo_gimnasio;
 }
 
-
 int main () {
     // Flags utiles en el programa
     bool fue_prestado = false;
@@ -421,19 +419,19 @@ int main () {
             // Se inicia la batalla segun el id del gimnasio
             switch (gimnasio_actual->id_funcion) {
                 case 1:
-                    resultado_batalla = iniciar_batalla(entrenador_actual, ash, funcion_batalla_1, 0, 0, es_simulada);
+                    resultado_batalla = iniciar_batalla(entrenador_actual, ash, funcion_batalla_1, 0,0, es_simulada);
                     break;
                 case 2:
-                    resultado_batalla = iniciar_batalla(entrenador_actual, ash, funcion_batalla_2, 0, 0, es_simulada);
+                    resultado_batalla = iniciar_batalla(entrenador_actual, ash, funcion_batalla_2, 0,0, es_simulada);
                     break;
                 case 3:
-                    resultado_batalla = iniciar_batalla(entrenador_actual, ash, funcion_batalla_3, 0, 0, es_simulada);
+                    resultado_batalla = iniciar_batalla(entrenador_actual, ash, funcion_batalla_3, 0,0, es_simulada);
                     break;
                 case 4:
-                    resultado_batalla = iniciar_batalla(entrenador_actual, ash, funcion_batalla_4, 0, 0, es_simulada);
+                    resultado_batalla = iniciar_batalla(entrenador_actual, ash, funcion_batalla_4, 0,0, es_simulada);
                     break;
                 case 5:
-                    resultado_batalla = iniciar_batalla(entrenador_actual, ash, funcion_batalla_5, 0, 0, es_simulada);
+                    resultado_batalla = iniciar_batalla(entrenador_actual, ash, funcion_batalla_5, 0,0, es_simulada);
                     break;
             }
 
