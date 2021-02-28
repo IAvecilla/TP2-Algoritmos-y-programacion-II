@@ -55,6 +55,7 @@ int posicion_hijo_izquierdo (int n) {
   return 2*n+1;
 }
 
+// Funcion interna para hacer sift_up y sift_down
 void swap (void** vector, int i, int j) {
   void* aux = vector[i];
   vector[i] = vector[j];
@@ -100,6 +101,7 @@ int heap_insertar (heap_t* heap, void* elemento) {
       return ERROR;
     }
 
+    //En caso de insertar un elemento, agrando el vector de heap
     void* aux = realloc(heap->vector, sizeof(elemento) * (size_t)(heap->tope + 1));
     if (!aux) {
       return ERROR;
@@ -119,6 +121,7 @@ void* heap_borrar_raiz (heap_t* heap) {
       return NULL;
     }
 
+    //Achico el vector cuando borro la raiz
     void* valor = heap->vector[0];
     heap->vector[0] = heap->vector[heap->tope - 1];
     heap->tope--;

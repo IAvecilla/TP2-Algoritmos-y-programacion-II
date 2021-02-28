@@ -9,6 +9,13 @@
 #include "pokemon.h"
 #include "entrenador.h"
 
+#define BLANCO_NEGRITA "\x1B[0;1m"
+#define NORMAL "\x1B[0m"
+#define VERDE "\x1B[32m"
+#define ROJO "\x1B[31m"
+#define ROSADO "\x1B[35;1m"
+
+
 /* 
  * Dibuja en consola el menu de inicio del juego.
  */
@@ -91,5 +98,10 @@ void mostrar_party_batalla_personaje (personaje_t* personaje);
  * Esta funcion no es segura ya que utiliza funciones por fuera del estandar del lenguaje.
  */
 void limpiar_consola();
+
+/* 
+ * Imprime un Ditto cuando se pierde, para que el jugador no se sienta tan mal.
+ */
+void imprimir_ditto();
 
 #endif

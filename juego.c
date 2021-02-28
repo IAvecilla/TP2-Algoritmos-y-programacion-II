@@ -22,7 +22,7 @@
 #define DERROTA -1
 #define CANTIDAD_PARTY 6
 #define MENSAJE_BIENVENIDA "Bienvenido a la aventura pokemon! :)\n\n"
-#define MENSAJE_DERROTA "La aventura pokemon siempre te espera de vuelta! \n"
+#define MENSAJE_DERROTA "La aventura pokemon siempre te espera de vuelta! \n\n"
 #define MENSAJE_VICTORIA "Felicidades ahora sos un verdadero maestro Pokemon!! Gracias por jugar :D"
 
 #define ESPERANDO_INPUT 'P'
@@ -104,6 +104,11 @@ personaje_t* cargar_jugador_principal (const char* ruta_archivo) {
         }
         
         leidos = fscanf(archivo_personaje_principal, "%c;", &tipo_lectura);
+    }
+    
+    if (primer_pokemon) {
+        destruir_pokemon(nuevo_pokemon);
+        return NULL;
     }
     
     fclose(archivo_personaje_principal);
@@ -289,6 +294,24 @@ int cargar_gimnasio (heap_t* heap,const char* ruta_archivo) {
         leidos = fscanf(archivo_gimnasios, "%c;", &tipo_lectura);
     }
     
+    if (primer_gimnasio) {
+        destruir_gimnasio(nuevo_gimnasio);
+        printf("Lo sentimos no se pudo cargar el archivo correctamente\n");
+        return ERROR;
+    }
+    
+    if (primer_entrenador) {
+        destruir_entrenador(nuevo_entrenador);
+        printf("Lo sentimos no se pudo cargar el archivo correctamente\n");
+        return ERROR;   
+    }
+    
+    if (primer_pokemon) {
+        destruir_pokemon(nuevo_pokemon);
+        printf("Lo sentimos no se pudo cargar el archivo correctamente\n");
+        return ERROR;
+    }
+    
     fclose(archivo_gimnasios);
     printf("Gimnasio/s cargado/s con exito!\n\n");
     return OK;
@@ -326,13 +349,15 @@ int main () {
     bool gimnasios_cargados = false;
     bool es_simulada = false;
 
+    // Array que contiene punteros a las funciones de batalla
+    int (*array[]) (void*, void*) = {funcion_batalla_1, funcion_batalla_2, funcion_batalla_3, funcion_batalla_4, funcion_batalla_5};
 
     heap_t* heap_gimnasios = heap_crear(comparador_de_gimnasios, destruir_gimnasio);
     char input = ESPERANDO_INPUT;
     int resultado_batalla;
     personaje_t* ash;
 
-    printf("%s", MENSAJE_BIENVENIDA);
+    printf(BLANCO_NEGRITA "%s", MENSAJE_BIENVENIDA);
     dibujar_menu_inicio(cargo_jugador, gimnasios_cargados);
 
     // Loop del menu inicial
@@ -341,9 +366,21 @@ int main () {
 
         //Carga personaje
         if ((input == 'E' || input == 'e') && !cargo_jugador) {
+            char ingreso[100];
+            printf("\nPonga el nombre del archivo para cargar el/los gimnasio (Ej: ""nombre.txt""): ");
+            fgets(ingreso, 100, stdin);
+
+            //Elimino el "Enter" final del usuario en su ingresodel archivo
+            ingreso[strcspn(ingreso, "\n")] = 0;
+
             limpiar_consola();
-            ash = cargar_jugador_principal("jugador_principal.txt");
-            cargo_jugador = true;
+            ash = cargar_jugador_principal(ingreso);
+            if (!ash) {
+                printf("Jugador no pudo ser cargado\n");
+            } else {
+                cargo_jugador = true;
+                printf("Jugador cargado con exito!\n");
+            }
         }
 
         // Pido el nombre del archivo y carga gimnasio/s
@@ -351,7 +388,10 @@ int main () {
             char ingreso[100];
             printf("\nPonga el nombre del archivo para cargar el/los gimnasio (Ej: ""nombre.txt""): ");
             fgets(ingreso, 100, stdin);
+            
+            //Elimino el "Enter" final del usuario en su ingresodel archivo
             ingreso[strcspn(ingreso, "\n")] = 0;
+            
             limpiar_consola();
             int validez = cargar_gimnasio(heap_gimnasios, ingreso);
             if (validez == -1) {
@@ -415,25 +455,8 @@ int main () {
 
         // Loop para el gimnasio, se ejecuta mientras haya entrenadores con los que batallar
         while (!lista_vacia(gimnasio_actual->pila_entrenadores)) {
-
             // Se inicia la batalla segun el id del gimnasio
-            switch (gimnasio_actual->id_funcion) {
-                case 1:
-                    resultado_batalla = iniciar_batalla(entrenador_actual, ash, funcion_batalla_1, 0,0, es_simulada);
-                    break;
-                case 2:
-                    resultado_batalla = iniciar_batalla(entrenador_actual, ash, funcion_batalla_2, 0,0, es_simulada);
-                    break;
-                case 3:
-                    resultado_batalla = iniciar_batalla(entrenador_actual, ash, funcion_batalla_3, 0,0, es_simulada);
-                    break;
-                case 4:
-                    resultado_batalla = iniciar_batalla(entrenador_actual, ash, funcion_batalla_4, 0,0, es_simulada);
-                    break;
-                case 5:
-                    resultado_batalla = iniciar_batalla(entrenador_actual, ash, funcion_batalla_5, 0,0, es_simulada);
-                    break;
-            }
+            resultado_batalla = iniciar_batalla(entrenador_actual, ash, array[gimnasio_actual->id_funcion - 1], 0, 0, es_simulada);
 
             // En caso de victoria contra el entrenador actual
             if (resultado_batalla == VICTORIA) {
@@ -469,7 +492,10 @@ int main () {
                         limpiar_consola();
                         cambiar_party(ash);
                     } else if (input == 'F' || input == 'f') {
+                        limpiar_consola();
                         printf(MENSAJE_DERROTA);
+                        imprimir_ditto();
+
                         destruir_gimnasio(gimnasio_actual);
                         destructor_personaje(ash);
                         destruir_heap(heap_gimnasios);
@@ -483,7 +509,9 @@ int main () {
             
             // En caso de derrota en una batalla simulada, se termina el juego
             } else {
+                limpiar_consola();
                 printf("Has perdido con el entrenador %s en %s\n\n", entrenador_actual->nombre, gimnasio_actual->nombre);
+                imprimir_ditto();
                 destruir_gimnasio(gimnasio_actual);
                 destructor_personaje(ash);
                 destruir_heap(heap_gimnasios);

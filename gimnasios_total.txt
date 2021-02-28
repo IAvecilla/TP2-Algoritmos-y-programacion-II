@@ -67,8 +67,8 @@ P;Bellsprout;40;75;35
 P;Weepinbell;55;90;50
 G;Gimnasio de Ciudad Plateada;5;5
 L;Brock
-P;Geodude;20;80;100
-P;Onix;70;45;160
+P;Geodude;30;60;60
+P;Onix;70;45;85
 E;Campista
 P;Geodude;20;80;100
 P;Sandshrew;40;75;85
@@ -100,14 +100,14 @@ P;Rhyhorn;30;90;100
 P;Nidorina;56;62;67
 P;Nidoqueen;76;92;87
 E;Entrenador
-P;Sandslash;70;105;115
+P;Sandslash;66;95;100
 P;Graveler;35;95;115
 P;Onix;70;45;160
 P;Graveler;35;95;115
 P;Marowak;45;80;110
 E;Entrenador
-P;Sandslash;65;100;110
-P;Sandslash;65;100;110
+P;Sandslash;65;90;90
+P;Sandslash;65;75;90
 P;Rhyhorn;25;85;95
 P;Nidorino;56;62;57
 P;Nidoking;85;102;77
@@ -139,14 +139,14 @@ P;Kadabra;105;35;30
 P;Drowzee;42;48;45
 G;Gimnasio de Ciudad Celeste;10;3
 L;Misty
-P;Staryu;85;45;55
-P;Starmie;115;75;85
+P;Staryu;55;60;20
+P;Starmie;70;45;50
 E;Dominguera Diana
-P;Goldeen;63;67;60
+P;Goldeen;70;67;60
 E;Nadador Luis
-P;Horsea;60;40;70
-P;Shellder;40;65;100
-G;Gimnasio de Isla Azafran;35;3
+P;Horsea;50;30;50
+P;Shellder;30;45;40
+G;Gimnasio de Isla Azafran;35;4
 L; Sabrina
 P;Kadabra;110;40;35
 P;Mr. Mime;95;50;70
@@ -171,5 +171,5 @@ P;Slowbro;30;75;110
 E;Medium
 P;Kadabra;105;35;30
 P;Slowpoke;15;65;65
-P;Mr. Mime;90;45;65
-P;Kadabra;105;35;30
+P;Mr. Mime;70;35;55
+P;Kadabra;90;25;20

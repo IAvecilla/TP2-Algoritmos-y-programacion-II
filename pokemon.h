@@ -14,7 +14,6 @@ typedef struct pokemon{
     int defensa;
     int ataque;
     bool vivo;
-    int id_pokemon;
     size_t cantidad_mejoras;
 } pokemon_t;
 

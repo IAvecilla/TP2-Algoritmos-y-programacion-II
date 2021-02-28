@@ -3,6 +3,7 @@
 
 
 void destructor_personaje (void* personaje) {
+    // Junto al personaje, elimino todos sus pokemon
     while (!lista_vacia(((personaje_t*)personaje)->lista_pokemones_obtenidos)) {
         pokemon_t* pokemon = lista_elemento_en_posicion(((personaje_t*)personaje)->lista_pokemones_obtenidos, 0);
         lista_borrar_de_posicion(((personaje_t*)personaje)->lista_pokemones_obtenidos, 0);
@@ -36,7 +37,7 @@ void cambiar_party (personaje_t* jugador) {
     fgets(input, 100, stdin);
     int seleccion_pokemon_mochila = atoi(input);
 
-
+    // El indice no corresponde
     if (seleccion_pokemon_equipo - 1 > lista_elementos(jugador->lista_pokemones_obtenidos) || seleccion_pokemon_mochila - 1 >= lista_elementos(jugador->lista_pokemones_obtenidos)) {
         return;
     }

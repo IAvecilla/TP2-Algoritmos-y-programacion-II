@@ -13,14 +13,22 @@ char obtener_caracter () {
 }
 
 void dibujar_menu_inicio (bool cargo_jugador, bool cargo_gimnasio) {
+printf("              _                        \n");             
+printf("  _ __   ___ | | _____ _ __ ___   ___  _ __\n");  
+printf(" | '_ \\ / _ \\| |/ / _ \\ '_ ` _ \\ / _ \\| '_ \\\n"); 
+printf(" | |_) | (_) |   <  __/ | | | | | (_) | | | |\n");
+printf(" | .__/ \\___/|_|\\_\\___|_| |_| |_|\\___/|_| |_|\n");
+printf(" |_|                                         \n");
+printf("\n");
+                                   
     if (!cargo_jugador) {
-        printf("E: Cargar jugador principal\n");
+        printf(BLANCO_NEGRITA "E: Cargar jugador principal\n");
     } else {
-        printf("\n");
+        printf(BLANCO_NEGRITA "\n");
     }
     printf("A: Agregar gimnasio a la aventura pokemon\n");
     printf("I: Comenzar partida\n");
-    printf("S: Simular partida\n\n");
+    printf("S: Simular partida" NORMAL "\n\n");
 }
 
 void dibujar_menu_gimnasio () {
@@ -32,14 +40,14 @@ void dibujar_menu_gimnasio () {
 
 void dibujar_menu_batalla (entrenador_t* enemigo, personaje_t* jugador, pokemon_t* pokemon_personaje, pokemon_t* pokemon_rival) {
     mostrar_party_batalla_entrenador(enemigo);
-    printf("\n\n%s\n", pokemon_rival->nombre);
-    printf("Ataque: %d\n",pokemon_rival->ataque);
-    printf("Defensa: %d\n",pokemon_rival->defensa);
-    printf("Velocidad: %d\n\n\n",pokemon_rival->velocidad);
-    printf("%s\n", pokemon_personaje->nombre);
-    printf("Ataque: %d\n",pokemon_personaje->ataque);
-    printf("Defensa: %d\n",pokemon_personaje->defensa);
-    printf("Velocidad: %d\n\n",pokemon_personaje->velocidad);
+    printf(BLANCO_NEGRITA "\n\n%s" NORMAL "\n", pokemon_rival->nombre);
+    printf(BLANCO_NEGRITA "Ataque: " NORMAL "%d\n",pokemon_rival->ataque);
+    printf(BLANCO_NEGRITA "Defensa: " NORMAL"%d\n",pokemon_rival->defensa);
+    printf(BLANCO_NEGRITA "Velocidad: " NORMAL "%d\n\n\n",pokemon_rival->velocidad);
+    printf(BLANCO_NEGRITA "%s" NORMAL "\n", pokemon_personaje->nombre);
+    printf(BLANCO_NEGRITA "Ataque: " NORMAL "%d\n",pokemon_personaje->ataque);
+    printf(BLANCO_NEGRITA "Defensa: " NORMAL "%d\n",pokemon_personaje->defensa);
+    printf(BLANCO_NEGRITA "Velocidad: " NORMAL "%d\n\n",pokemon_personaje->velocidad);
     mostrar_party_batalla_personaje(jugador);
 }
 
@@ -85,14 +93,18 @@ bool imprimir_pokemon (void* pokemon, void* extra) {
     return false;
 }
 
+// Para no realizar dos funciones internas, esta recibe un personaje o entrenador segun se requiera, el otro parametro recibe NULL
 void imprimir_indices_pokemon (personaje_t* personaje, size_t recorridos, entrenador_t* entrenador) {
     pokemon_t* pokemon_actual;
+    // Por cada pokemon que existe en el personaje o entrenador
     for (int i = 0; i < recorridos; i++) {
         if (!entrenador){
             pokemon_actual = lista_elemento_en_posicion(personaje->lista_pokemones_obtenidos, (size_t)i);
         } else {
            pokemon_actual = lista_elemento_en_posicion(entrenador->lista_pokemones, (size_t)i);
         }
+
+        // Imprime el indice a la mitad del nombre del pokemon
         for (int j = 0; j <= strlen(pokemon_actual->nombre); j++){
             if (j == strlen(pokemon_actual->nombre) / 2){
                 printf("%d ", i + 1);
@@ -140,9 +152,9 @@ void dibujar_gimnasio(gimnasio_t* gimnasio) {
 bool imprimir_pokemon_UI (void* pokemon, void* extra) {
     if (*((int*)extra) != 0) {
         if (((pokemon_t*)pokemon)->vivo) {
-            printf(". ");
+            printf(VERDE ". " NORMAL);
         } else {
-            printf("X ");
+            printf(ROJO "X " NORMAL);
         }
         *((int*)extra) -= 1;
         return true;
@@ -163,4 +175,17 @@ void mostrar_party_batalla_personaje (personaje_t* personaje) {
         elementos_a_recorrer = 6;
     }
     lista_con_cada_elemento(personaje->lista_pokemones_obtenidos, imprimir_pokemon_UI, &elementos_a_recorrer);
+}
+
+void imprimir_ditto() {
+    printf(ROSADO "           /~\\_.-~-._,--.._        \n");
+    printf("          |                ~-.._   \n");
+    printf("          |     .     .        \\ \n");
+    printf("          |                    /  Amw \n"); 
+    printf("          |     --....,       | \\  \n");
+    printf("         /                      \\ \n");
+    printf("        |                        | \n");
+    printf("        |                        \\ \n");
+    printf("       /                         | \n");
+    printf("       \\_.-._  __...___.._______/   " NORMAL "\n");
 }
