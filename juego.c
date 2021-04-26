@@ -222,7 +222,6 @@ int cargar_gimnasio (heap_t* heap,const char* ruta_archivo) {
 
     FILE* archivo_gimnasios = fopen(ruta_archivo, "r");
     if (!archivo_gimnasios) {
-        printf("Lo sentimos no se pudo cargar el archivo correctamente\n");
         return ERROR;
     }
 
@@ -238,7 +237,6 @@ int cargar_gimnasio (heap_t* heap,const char* ruta_archivo) {
         destruir_pokemon(nuevo_pokemon);
         destruir_entrenador(nuevo_entrenador);
         fclose(archivo_gimnasios);
-        printf("Lo sentimos no se pudo cargar el archivo correctamente\n");
         return ERROR;
     }
 
@@ -268,7 +266,6 @@ int cargar_gimnasio (heap_t* heap,const char* ruta_archivo) {
             if (leidos != 1) {
                 destruir_entrenador(nuevo_entrenador);
                 fclose(archivo_gimnasios);
-                printf("Lo sentimos no se pudo cargar el archivo correctamente\n");
                 return ERROR;
             }
             lista_apilar(nuevo_gimnasio->pila_entrenadores, nuevo_entrenador);
@@ -285,7 +282,6 @@ int cargar_gimnasio (heap_t* heap,const char* ruta_archivo) {
             if (leidos != 4) {
                 destruir_pokemon(nuevo_pokemon);
                 fclose(archivo_gimnasios);
-                printf("Lo sentimos no se pudo cargar el archivo correctamente\n");
                 return ERROR;
             }
             lista_insertar(nuevo_entrenador->lista_pokemones, nuevo_pokemon);
@@ -389,7 +385,7 @@ int main () {
             printf("\nPonga el nombre del archivo para cargar el/los gimnasio (Ej: ""nombre.txt""): ");
             fgets(ingreso, 100, stdin);
             
-            //Elimino el "Enter" final del usuario en su ingresodel archivo
+            //Elimino el "Enter" final del usuario en su ingreso del archivo
             ingreso[strcspn(ingreso, "\n")] = 0;
             
             limpiar_consola();
