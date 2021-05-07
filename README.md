@@ -14,3 +14,7 @@ Tambien se utilizó Valgrind para el control de la memoria dinamica</br>
 <code>make valgrind</code></br>
 
 Si se desea, puede saltearse la linea de compilacion, en cualquier caso <code>make jugar</code> o <code>make valgrind</code> compilaran en caso de que no se haya hecho antes.
+
+# Funcionamiento
+
+El juego se desarrolla a través de una interfaz constituida por menús e ingresos del usuario segun la accion indicada, el usuario tiene la posibilidad de empezar una partida normal o simular una. En ambos casos es obligatorio que antes de empezar el usuario cargue el jugador principal mediante un archivo y al menos un gimnasio, que podra cargar uno por uno con distintos archivos o todos juntos mediante un solo archivo
